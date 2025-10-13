@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cairo } from "next/font/google";
 import "./globals.css";
+import Providers from "@/providers/Providers";
 
 const cairoFont = Cairo({
   weight: ["200", "300", "400", "500", "600", "700", "800", "900", "1000"],
@@ -21,7 +22,7 @@ export default function RootLayout({
       <body
         className={`${cairoFont.className} antialiased w-screen h-screen overflow-hidden`}
       >
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
