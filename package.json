@@ -6,7 +6,10 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "prisma:install": "bun run prisma generate",
+    "prisma:migrate": "bun run prisma migrate dev",
+    "prisma:studio": "bun run prisma studio"
   },
   "dependencies": {
     "@prisma/client": "^6.17.1",
