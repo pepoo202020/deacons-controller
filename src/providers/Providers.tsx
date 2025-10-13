@@ -1,3 +1,4 @@
+import { LanguageProvider } from "./language/LanguageProvider";
 import { ThemeProvider } from "./theme/ThemeProvider";
 
 interface IProvidersProps {
@@ -12,7 +13,9 @@ function Providers({ children }: IProvidersProps) {
       enableSystem
       disableTransitionOnChange
     >
-      {children}
+      <LanguageProvider defaultLanguage="en" enableDetection={true}>
+        {children}
+      </LanguageProvider>
     </ThemeProvider>
   );
 }
