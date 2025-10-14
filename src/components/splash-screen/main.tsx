@@ -4,13 +4,13 @@ import LogoComponent from "../shared/LogoC/main";
 import SplashScreenDesc from "./content/SplashScreenDesc";
 import SplashScreenVerse from "./content/SplashScreenVerse";
 import Loading from "../shared/LoadingC/Loading";
-import { useSession, getSession } from "next-auth/react";
+import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 const SplashScreen = () => {
   const { t } = useLanguage();
-  const { data, status } = useSession();
+  const { status } = useSession();
   const router = useRouter();
 
   useEffect(() => {
