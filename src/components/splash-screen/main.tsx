@@ -2,6 +2,7 @@
 import { useLanguage } from "@/providers/language/LanguageProvider";
 import LogoComponent from "../shared/LogoC/main";
 import SplashScreenDesc from "./content/SplashScreenDesc";
+import SplashScreenVerse from "./content/SplashScreenVerse";
 
 const SplashScreen = () => {
   const { t } = useLanguage();
@@ -15,6 +16,7 @@ const SplashScreen = () => {
         text={t("appName")}
       />
       <SplashScreenDesc text={t("appDescription")} />
+      <SplashScreenVerse verse={t("verse")} />
     </div>
   );
 };
