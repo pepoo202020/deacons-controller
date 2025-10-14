@@ -1,3 +1,5 @@
+"use client";
+import { SessionProvider } from "next-auth/react";
 import { LanguageProvider } from "./language/LanguageProvider";
 import { ThemeProvider } from "./theme/ThemeProvider";
 
@@ -7,16 +9,18 @@ interface IProvidersProps {
 
 function Providers({ children }: IProvidersProps) {
   return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-      disableTransitionOnChange
-    >
-      <LanguageProvider defaultLanguage="en" enableDetection={false}>
-        {children}
-      </LanguageProvider>
-    </ThemeProvider>
+    <SessionProvider>
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
+        <LanguageProvider defaultLanguage="en" enableDetection={false}>
+          {children}
+        </LanguageProvider>
+      </ThemeProvider>
+    </SessionProvider>
   );
 }
 
