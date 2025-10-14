@@ -64,7 +64,7 @@ const LanguageSelector = ({
             className={cn(
               "w-full flex items-center justify-start gap-2",
               languageSelector.isActive
-                ? "cursor-auto text-yellow-500"
+                ? "cursor-auto text-yellow-700 dark:text-yellow-200"
                 : "cursor-pointer"
             )}
             onClick={() => languageSelector.click()}
