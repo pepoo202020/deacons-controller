@@ -36,6 +36,7 @@ const SplashScreen = () => {
         splashScreen
         textSize="xl"
         text={t("appName")}
+        header={false}
       />
       <SplashScreenDesc text={t("appDescription")} />
       <SplashScreenVerse verse={t("verse")} />
