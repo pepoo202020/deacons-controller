@@ -14,7 +14,79 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+// ==========================================================================================
+// ===========================  USER MANAGEMENT =============================================
+// ==========================================================================================
+
 model User {
-  id   String @id @default(cuid())
-  name String
+  id               String            @id @default(cuid())
+  name             String
+  email            String            @unique
+  password         String
+  passwordPatterns PasswordPattern[]
+  roles            UserRole[]
+  nationalityID    String            @unique @db.VarChar(32)
+  profileImage     String?
+  isActive         Boolean           @default(true)
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+
+  // relations
+
+  @@index([email])
+}
+
+model Role {
+  id          String           @id @default(cuid())
+  arabicName  String           @unique @db.VarChar(128)
+  englishName String           @unique @db.VarChar(128)
+  permissions RolePermission[]
+  users       UserRole[] // inverse side of M:N
+  roleImage   String?
+  isActive    Boolean          @default(true)
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+
+  @@index([arabicName, englishName])
+}
+
+model UserRole {
+  // Junction table for M:N User <-> Role
+  id        String   @id @default(cuid())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    String
+  role      Role     @relation(fields: [roleId], references: [id], onDelete: Cascade)
+  roleId    String
+  createdAt DateTime @default(now())
+
+  @@unique([userId, roleId]) // prevent duplicates
+  @@index([userId])
+  @@index([roleId])
+}
+
+model RolePermission {
+  id                     String   @id @default(cuid())
+  permission             String   @db.VarChar(128)
+  permission_description String   @db.VarChar(256)
+  Role                   Role?    @relation(fields: [roleId], references: [id])
+  roleId                 String?
+  isActive               Boolean  @default(true)
+  createdAt              DateTime @default(now())
+  updatedAt              DateTime @updatedAt
+
+  @@unique([roleId, permission]) // each permission once per role
+  @@index([roleId])
+}
+
+model PasswordPattern {
+  id        String   @id @default(cuid())
+  name      String   @unique @db.VarChar(64)
+  pattern   String
+  User      User?    @relation(fields: [userId], references: [id])
+  userId    String?
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
 }
