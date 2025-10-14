@@ -1,5 +1,5 @@
-import LogoImage, { TLogoImageSizes } from "./LogoImage";
-import LogoText, { TLogoTextSizes } from "./LogoText";
+import LogoImage, { TLogoImageSizes } from "./content/LogoImage";
+import LogoText, { TLogoTextSizes } from "./content/LogoText";
 
 interface ILogoComponentProps {
   imageSize: TLogoImageSizes;
@@ -15,7 +15,7 @@ const LogoComponent = ({
   text,
 }: ILogoComponentProps) => {
   return (
-    <div className="flex items-center justify-center gap-5">
+    <div className="flex items-center justify-center gap-5 mb-5">
       {/* logo Image */}
       <LogoImage size={imageSize} splashScreen={splashScreen} />
       {/* logo text */}
