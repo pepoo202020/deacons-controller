@@ -13,7 +13,7 @@ function Providers({ children }: IProvidersProps) {
       enableSystem
       disableTransitionOnChange
     >
-      <LanguageProvider defaultLanguage="en" enableDetection={true}>
+      <LanguageProvider defaultLanguage="en" enableDetection={false}>
         {children}
       </LanguageProvider>
     </ThemeProvider>

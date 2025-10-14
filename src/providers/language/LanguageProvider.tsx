@@ -118,7 +118,7 @@ const initializeI18n = () => {
         transSupportBasicHtmlNodes: true,
         transKeepBasicHtmlNodesFor: ["br", "strong", "i", "p"],
       },
-      debug: process.env.NODE_ENV === "development",
+      debug: Boolean(JSON.parse(process.env.NEXT_PUBLIC_I18N_DEBUG ?? "false")),
     });
 };
 
