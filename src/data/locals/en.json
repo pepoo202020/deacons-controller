@@ -2,5 +2,8 @@
   "appName": "Deacons Church Controller",
   "appDescription": "Serving with Faith: Excellence in Ministry for Saint Abadir and Ereny Church, Asyut",
   "verse": "Let us serve one another in love. — Galatians 5:13",
-  "loadingSplashScreen": "Loading ...."
+  "loadingSplashScreen": "Loading ....",
+  "arabicLang": "Arabic",
+  "englishLang": "English",
+  "changingLanguage": "Changing Language please wait ...."
 }

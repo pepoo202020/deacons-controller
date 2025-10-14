@@ -14,7 +14,10 @@ const Loading = ({ text, mode }: ILoadingProps) => {
   ) : mode === "modal" ? (
     <div>loading modal</div>
   ) : (
-    <div>loading page</div>
+    <div className="fixed w-screen h-screen bg-black/40 text-white flex flex-col items-center justify-center gap-5">
+      <Loader variant="bars" />
+      <p className="font-semibold text-lg">{text}</p>
+    </div>
   );
 };
 
