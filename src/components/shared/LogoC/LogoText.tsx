@@ -39,13 +39,13 @@ const LogoText = ({ size, header, text, splashScreen }: ILogoTextProps) => {
     size === "sm"
       ? "text-lg md:text-xl"
       : size === "lg"
-      ? "text-3xl md:text-4xl"
-      : "text-4xl md:text-5xl";
+      ? "text-2xl md:text-3xl"
+      : "text-3xl md:text-4xl";
   console.log(lines);
   return (
     <div
       className={cn(
-        "flex flex-col items-start justify-center leading-tight capitalize",
+        "flex flex-col items-start justify-center gap-2 capitalize",
         sizeClass
       )}
     >
