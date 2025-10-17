@@ -8,5 +8,13 @@
   "changingLanguage": "Changing Language please wait ....",
   "allRights": "All Rights is saved",
   "poweredBy": "Powered By",
-  "developerName": "Abanob Shenoda"
+  "developerName": "Abanob Shenoda",
+  "emailError": "please enter valid email",
+  "passwordLengthError": "password length must be 6 characters at least",
+  "emailLabel": "Email Address",
+  "emailPlaceholder": "please enter your email address",
+  "passwordLabel": "Password",
+  "passwordPlaceholder": "please enter your password",
+  "passwordButtonLabel": "show me the password",
+  "forgetPassword": "Are you Forgot the password?"
 }

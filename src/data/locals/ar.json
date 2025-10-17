@@ -8,5 +8,13 @@
   "changingLanguage": "تغيير اللغة الرجاء الإنتظار ....",
   "allRights": "كل الحقوق محفوظة",
   "poweredBy": "تم التصميم بواسطة",
-  "developerName": "أبانوب شنودة"
+  "developerName": "أبانوب شنودة",
+  "emailError": "الرجاء إدخال بريد إلكتروني صالح",
+  "passwordLengthError": "يجب أن يكون طول كلمة المرور 6 أحرف على الأقل",
+  "emailLabel": "الايميل الالكتروني",
+  "emailPlaceholder": "الرجاء إدخال عنوان بريدك الإلكتروني",
+  "passwordLabel": "كلمة السر",
+  "passwordPlaceholder": "الرجاء إدخال كلمة المرور الخاصة بك",
+  "passwordButtonLabel": "أرني كلمة المرور",
+  "forgetPassword": "هل نسيت كلمة المرور؟"
 }

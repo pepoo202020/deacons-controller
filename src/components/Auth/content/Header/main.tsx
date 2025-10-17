@@ -19,7 +19,7 @@ const AuthHeader = () => {
     <Loading mode="page" text={t("changingLanguage")} />;
   }
   return (
-    <div className="h-20 w-full max-w-7xl mx-auto flex items-center justify-between">
+    <div className="h-20 w-full max-w-7xl mx-auto flex items-center justify-between px-2 md:px-0">
       {/* logo */}
       <LogoComponent
         imageSize="sm"

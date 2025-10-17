@@ -134,3 +134,7 @@
 .animate-fade-in {
   animation: fade-in 0.8s ease-out;
 }
+
+.bg {
+  @apply bg-[#1E253C] text-white dark:bg-white dark:text-[#1E253C];
+}
