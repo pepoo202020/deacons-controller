@@ -5,7 +5,7 @@ export default function MainLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="w-full h-full overflow-hidden flex flex-col items-center justify-center bg-[#1E253C] text-white">
+      <body className="w-full h-full overflow-hidden flex flex-col items-center justify-center">
         {children}
       </body>
     </html>

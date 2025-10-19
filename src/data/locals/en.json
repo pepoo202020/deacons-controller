@@ -16,5 +16,8 @@
   "passwordLabel": "Password",
   "passwordPlaceholder": "please enter your password",
   "passwordButtonLabel": "show me the password",
-  "forgetPassword": "Are you Forgot the password?"
+  "forgetPassword": "Are you Forgot the password?",
+  "forgetPasswordModalTitle": "Forget Password",
+  "forgetPasswordModalDescription": "To reset your password, please contact the admin via WhatsApp. The admin will assist you in changing your password directly from the system.",
+  "contactAdminButton": "Contact Admin on WhatsApp"
 }

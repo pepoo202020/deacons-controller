@@ -3,7 +3,7 @@ interface ISplashScreenDescProps {
 }
 
 const SplashScreenDesc = ({ text }: ISplashScreenDescProps) => {
-  return <p className="text-2xl font-light italic mb-5">{text}</p>;
+  return <p className="text-2xl font-light italic mb-5 text-center">{text}</p>;
 };
 
 export default SplashScreenDesc;

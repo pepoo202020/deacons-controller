@@ -10,7 +10,6 @@ import {
   InputGroupButton,
   InputGroupInput,
 } from "@/components/ui/input-group";
-import { Mail } from "lucide-react";
 import { ControllerRenderProps, FieldValues, Path } from "react-hook-form";
 import { IconType } from "react-icons";
 
@@ -44,7 +43,7 @@ const TextFormField = <TFieldValues extends FieldValues>({
         <InputGroup className="dark:border-black border-white">
           <InputGroupInput placeholder={placeholder} type={type} {...field} />
           {Icon && (
-            <InputGroupAddon>
+            <InputGroupAddon className="px-2">
               <Icon />
             </InputGroupAddon>
           )}

@@ -29,7 +29,7 @@ const SplashScreen = () => {
   }, [router, status]);
 
   return (
-    <div className="h-full w-full flex flex-col items-center justify-center gap-2 animate-fade-in">
+    <div className="h-full w-full flex flex-col items-center justify-center gap-2 animate-fade-in bg-[#1E253C] text-white">
       {/* logo */}
       <LogoComponent
         imageSize="xl"
