@@ -7,7 +7,7 @@ interface ISchemaProps {
 export const loginFormSchema = ({ t }: ISchemaProps) => {
   return z.object({
     email: z.email(t("emailError")),
-    password: z.string().length(6, t("passwordLengthError")),
+    password: z.string().min(5, t("passwordLengthError")),
   });
 };
 

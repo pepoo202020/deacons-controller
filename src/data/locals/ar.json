@@ -19,5 +19,6 @@
   "forgetPassword": "هل نسيت كلمة المرور؟",
   "forgetPasswordModalTitle": "نسيت كلمة المرور",
   "forgetPasswordModalDescription": "لإعادة تعيين كلمة المرور الخاصة بك، يرجى الاتصال بالمدير عبر واتساب. سيساعدك المدير في تغيير كلمة المرور مباشرة من النظام.",
-  "contactAdminButton": "الاتصال بالمدير عبر واتساب"
+  "contactAdminButton": "الاتصال بالمدير عبر واتساب",
+  "loginButton": "تسجيل الدخول"
 }

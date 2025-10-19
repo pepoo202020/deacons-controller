@@ -9,6 +9,7 @@ import { RiLockPasswordFill } from "react-icons/ri";
 import { useCallback, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import ForgetPasswordModal from "./ForgetPasswordModal";
+import CustomActionButton from "@/components/shared/CustomActionButton/main";
 
 interface ILoginFormBodyProps {
   t: (key: string, options?: Record<string, unknown> | undefined) => string;
@@ -59,6 +60,11 @@ const LoginFormBody: React.FC<ILoginFormBodyProps> = ({ t }) => {
           />
         </div>
         <ForgetPasswordModal />
+        <CustomActionButton
+          text={t("loginButton")}
+          variant="default"
+          type="submit"
+        />
       </form>
     </Form>
   );

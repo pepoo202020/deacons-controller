@@ -30,7 +30,7 @@ const ForgetPasswordModal = () => {
     <div className="flex items-center justify-end relative">
       <div
         onClick={handleForgetClick}
-        className="text-white dark:text-[#1E253C] cursor-pointer text-sm font-medium hover:underline"
+        className="text-white dark:text-[#1E253C] cursor-pointer text-sm font-medium hover:underline mb-2"
       >
         {t("forgetPassword")}
       </div>
