@@ -20,5 +20,8 @@
   "forgetPasswordModalTitle": "Forget Password",
   "forgetPasswordModalDescription": "To reset your password, please contact the admin via WhatsApp. The admin will assist you in changing your password directly from the system.",
   "contactAdminButton": "Contact Admin on WhatsApp",
-  "loginButton": "Login"
+  "loginButton": "Login",
+  "notificationsTitle": "Notifications",
+  "noNotifications": "There are no notifications",
+  "from": "from"
 }
