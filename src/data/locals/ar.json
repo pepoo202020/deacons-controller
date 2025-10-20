@@ -23,5 +23,10 @@
   "loginButton": "تسجيل الدخول",
   "notificationsTitle": "الإشعارات",
   "noNotifications": "لا توجد إشعارات",
-  "from": "من"
+  "from": "من",
+  "year": "سنة",
+  "viewProfile": "عرض الملف الشخصي",
+  "lightTheme": "الثيم الفاتح",
+  "darkTheme": "الثيم الداكن",
+  "logout": "تسجيل الخروج"
 }

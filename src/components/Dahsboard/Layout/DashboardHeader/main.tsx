@@ -6,6 +6,9 @@ import Link from "next/link";
 import NotificationButton, {
   INotification,
 } from "./content/NotificationButton";
+import { User } from "@/generated/prisma";
+import { ProfileButton } from "./content/ProfileButton";
+import { useTheme } from "next-themes";
 
 const notifications: INotification[] = [
   {
@@ -50,9 +53,22 @@ const notifications: INotification[] = [
   },
 ];
 
+const user: User = {
+  id: "123456",
+  createdAt: new Date(),
+  email: "poposhosh23@gmail.com",
+  isActive: true,
+  name: "Abanob Shenoda Tawfik",
+  nationalityID: "29610012516535",
+  password: "123456789",
+  profileImage: "/images/300.jpeg",
+  updatedAt: new Date(),
+};
+
 const DashboardHeader = () => {
-  const { t, isRTL } = useLanguage();
+  const { t, isRTL, language, changeLanguage } = useLanguage();
   const { isDesktop } = useIsMobile();
+  const { theme, setTheme } = useTheme();
   return (
     <div className="flex items-center px-5 md:px-0 justify-between w-full max-w-7xl h-20 shadow">
       {/* logo */}
@@ -75,6 +91,15 @@ const DashboardHeader = () => {
           />
         )}
         {/* profile */}
+        <ProfileButton
+          user={user}
+          isRTL={isRTL}
+          t={t}
+          setTheme={setTheme}
+          theme={theme}
+          changeLanguage={changeLanguage}
+          language={language}
+        />
       </div>
     </div>
   );
